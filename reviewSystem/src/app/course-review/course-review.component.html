@@ -1,0 +1,40 @@
+<div id="singleCourse" class="singleCourse">
+  <mat-grid-list cols="1" rowHeight="300px" *ngIf="courseReviewsAvailable">
+    <mat-grid-tile class="mat-grid-tile" style="background:white">
+      <div class="container">
+        <div class="row">
+          <h4>Course Id: {{singleCourse.cid}}</h4>
+        </div>
+        <div class="row">
+          <h4>Course Name: {{singleCourse.cname}}</h4>
+        </div>
+        <div class="row">
+          <h4>Course Description: {{singleCourse.detail}}</h4>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="mat-grid-tile" *ngFor="let x of courseReviews" style="background:white"
+      onmouseover="this.style.background='gray';" onmouseout="this.style.background='white';">
+      <div class="container">
+        <div class="row">
+          <h2>Course Review.</h2>
+        </div>
+        <div class="row">
+          <h4>Content: {{x.content}}</h4>
+        </div>
+        <div class="row">
+          <h4>Instructor's Presentation: {{x.instructorPerformance}}</h4>
+        </div>
+        <div class="row">
+          <h4>Video Quality: {{x.videoQuality}}</h4>
+        </div>
+        <div class="row">
+          <h4>Overall Experience: {{x.overallExperience}}</h4>
+        </div>
+        <div class="row">
+          <h4>Comments: {{x.comments}}</h4>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

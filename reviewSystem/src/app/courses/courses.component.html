@@ -1,0 +1,18 @@
+<div class="courseList">
+  <mat-grid-list cols="1" rowHeight="100px" *ngIf="courseDetailsAvailable">
+    <mat-grid-tile class="mat-grid-tile" *ngFor="let x of courseDetails" style="background:white"
+      onmouseover="this.style.background='gray';" onmouseout="this.style.background='white';">
+      <div class="container" (click)="loadCourseReview(x.cid,$event)">
+        <div class="row">
+          <h4>{{x.cid}}</h4>
+        </div>
+        <div class="row">
+          <h4>{{x.cname}}</h4>
+        </div>
+        <div class="row">
+          <h4>{{x.detail}}</h4>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
